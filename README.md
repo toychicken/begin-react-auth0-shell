@@ -47,7 +47,8 @@ AUTH0_CLIENT_SECRET=get-from-auth0-dashboard
 
 **NB** 
 
-Had to use `npm install node-fetch@2` (v2) because you can't mix commonJS & ES modules
+* Had to use `npm install node-fetch@2` (v2) because you can't mix commonJS & ES modules
+* Make sure you use the _same_ `AUTH0_CLIENT_ID` in the React app (in `src/index.js`) as in the .env file.
 
 ## Resources used to get here
 
