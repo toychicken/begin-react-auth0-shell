@@ -11,6 +11,8 @@ ReactDOM.render(
 		domain="dg-begin-shell.eu.auth0.com"
 		clientId="Oruu8lx9Lb3U8PGygE4XAfycB7LrJMiN"
 		redirectUri={window.location.origin}
+		audience="https://dg-begin-shell.eu.auth0.com/api/v2/"
+		scope="read:current_user update:current_user_metadata"
 	>
 		<App />
 	</Auth0Provider>,

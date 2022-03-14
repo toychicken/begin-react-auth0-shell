@@ -3,6 +3,7 @@ import './App.scss';
 import LoginButton from "./client/Auth/LoginButton";
 import LogoutButton from "./client/Auth/LogoutButton";
 import Profile from "./client/Profile";
+import Todos from "./client/Todos";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 		  <div>
 			  <LoginButton /> | <LogoutButton />
 		  </div>
+		  <Todos />
       </header>
     </div>
   );
