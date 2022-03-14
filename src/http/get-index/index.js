@@ -1,5 +1,7 @@
 // src/http/get-index/index.js
 const arc = require('@architect/functions')
+const { read } = require('@architect/shared/crud')
+const ToDos = require('@architect/views/components/todos')
 
 exports.handler = arc.http.async(http)
 
@@ -13,6 +15,8 @@ async function http (req) {
 	const loginUrl=`${issuerBaseUrl}/authorize?response_type=code&client_id=${clientId}&redirect_uri=${baseUrl}/callback&scope=openid%20profile`
 
 	let session = await arc.http.session.read(req)
+
+	let items = await read(session.accountID)
 
 	return {
 		statusCode: 200,
@@ -37,6 +41,7 @@ async function http (req) {
   <div class="margin-bottom-16">
   ${session.name ? `Welcome ${session.name}!` : ''} ${!session.token ?  `<a href="${loginUrl}">Login</a>` : `<a href="/logout">Logout</a>`}
   </div>
+  ${session.token ? await ToDos({items}) : ''}
 </body>
 </html>
 `

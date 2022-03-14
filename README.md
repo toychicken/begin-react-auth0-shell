@@ -25,7 +25,7 @@ arc version
 
 ```
 
-** Setup Auth0 Tenant
+**Setup Auth0 Tenant**
 
 Followed steps from [this article](https://blog.begin.com/posts/2022-01-20-auth0-todo-app)
 
@@ -34,7 +34,7 @@ Followed steps from [this article](https://blog.begin.com/posts/2022-01-20-auth0
 * Added callback Urls `http://localhost:3333/callback`
 * Added Logout Url `http://localhost:3333` (no trailing slash)
 
-** Made an .env file **
+**Made an .env file**
 
 It looks like:
 
@@ -52,3 +52,8 @@ Had to use `npm install node-fetch@2` (v2) because you can't mix commonJS & ES m
 ## Resources used to get here
 
 [https://blog.begin.com/posts/2022-01-20-auth0-todo-app]
+
+
+### Thoughts on how to do stuff
+
+Use SPA param - [https://arc.codes/docs/en/reference/runtime-helpers/node.js#parameters]
