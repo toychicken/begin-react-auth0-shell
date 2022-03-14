@@ -1,0 +1,16 @@
+{
+  "name": "begin-react-auth0-shell",
+  "version": "0.0.0",
+  "description": "A fresh new Architect project!",
+  "scripts": {
+    "start": "npx sandbox"
+  },
+  "devDependencies": {
+    "@architect/architect": "^10.1.0"
+  },
+  "dependencies": {
+    "@architect/functions": "^5.0.4",
+    "jwt-decode": "^3.1.2",
+    "node-fetch": "^3.2.3"
+  }
+}

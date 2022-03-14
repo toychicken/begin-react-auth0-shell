@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@architect/functions": "^5.0.4",
+    "jwt-decode": "^3.1.2",
+    "node-fetch": "^2.6.7"
+  }
+}
