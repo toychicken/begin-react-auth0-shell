@@ -6,6 +6,7 @@ const ToDos = require('@architect/views/components/todos')
 exports.handler = arc.http.async(http)
 
 async function http (req) {
+
 	const {
 		AUTH0_BASE_URL: baseUrl,
 		AUTH0_ISSUER_BASE_URL: issuerBaseUrl,

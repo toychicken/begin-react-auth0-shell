@@ -14,7 +14,7 @@ const Profile = () => {
 					audience: `https://${domain}/api/v2/`,
 					scope: "read:current_user",
 				});
-
+				console.log('access token', accessToken)
 				const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user.sub}`;
 
 				const metadataResponse = await fetch(userDetailsByIdUrl, {
@@ -23,7 +23,7 @@ const Profile = () => {
 					},
 				});
 
-				const { user_metadata } = await metadataResponse.json();
+				const user_metadata = await metadataResponse.json();
 
 				setUserMetadata(user_metadata);
 			} catch (e) {
@@ -34,6 +34,7 @@ const Profile = () => {
 		getUserMetadata();
 	}, [getAccessTokenSilently, user?.sub]);
 
+	console.log('USER meta', userMetadata);
 	return (
 		isAuthenticated && (
 			<div>
@@ -41,7 +42,7 @@ const Profile = () => {
 				<h2>{user.name}</h2>
 				<p>{user.email}</p>
 				<h3>User Metadata</h3>
-				{userMetadata ? (
+				{!!userMetadata ? (
 					<pre>{JSON.stringify(userMetadata, null, 2)}</pre>
 				) : (
 					"No user metadata defined"

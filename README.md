@@ -45,6 +45,12 @@ AUTH0_CLIENT_ID=get-from-auth0-dashboard
 AUTH0_CLIENT_SECRET=get-from-auth0-dashboard
 ```
 
+Set up the todo app, as per the article, but am now 'converting' it to use React components and have Begin act as an API provider... so
+
+**I think I need to set up an 'API' on Auth0 to protect my API.
+
+
+
 **NB** 
 
 * Had to use `npm install node-fetch@2` (v2) because you can't mix commonJS & ES modules
@@ -52,9 +58,10 @@ AUTH0_CLIENT_SECRET=get-from-auth0-dashboard
 
 ## Resources used to get here
 
-[https://blog.begin.com/posts/2022-01-20-auth0-todo-app]
+* https://blog.begin.com/posts/2022-01-20-auth0-todo-app
+* Auth0 SPA app starter - https://auth0.com/docs/quickstart/spa/react
 
 
 ### Thoughts on how to do stuff
 
-Use SPA param - [https://arc.codes/docs/en/reference/runtime-helpers/node.js#parameters]
+* Use SPA param - https://arc.codes/docs/en/reference/runtime-helpers/node.js#parameters

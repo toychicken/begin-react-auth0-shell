@@ -5,6 +5,7 @@ begin-react-auth0-shell
 get /
 get /callback
 get /logout
+get /todos
 post /todos
 post /todos/:id
 
