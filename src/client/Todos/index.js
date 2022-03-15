@@ -21,8 +21,8 @@ const Todos = () => {
 						Authorization: `Bearer ${accessToken}`,
 					},
 				});
-				let out = await data.json();
-				console.log('Getting things to do ', out);
+				let items = await data.json();
+				setTodolist(items);
 			} catch (e) {
 				console.log(e.message);
 			}
@@ -31,11 +31,23 @@ const Todos = () => {
 		getTodos();
 	}, [user]);
 
+	const List = () => {
+		let output = [];
+		todoList.map(item => {
+			output.push(<li>
+				* <pre>{`${JSON.stringify(item, null, 2)}`}</pre>
+			</li>);
+			return true;
+		})
+	}
 
 	return (
 		<>
-			<h2>To do</h2>
+			<h2>To dos</h2>
 		<ul>
+			{
+
+			}
 		</ul>
 			<p>If you can see this... something's working</p>
 		</>
